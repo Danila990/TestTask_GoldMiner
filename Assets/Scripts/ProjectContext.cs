@@ -22,7 +22,6 @@ public class ProjectContext : Singleton<ProjectContext>
         if(_isTestInput)
         {
             InputService = gameObject.AddComponent<PcInputService>();
-            InputService = gameObject.AddComponent<MobileInputService>();
             return;
         }
 
