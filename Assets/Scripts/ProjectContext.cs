@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ProjectContext : Singleton<ProjectContext>
 {
-    [SerializeField] private bool _isTestPc = false;
+    [SerializeField] private bool _isTestInput = false;
 
     [field: SerializeField] public ItemsController ItemsController {  get; private set; }
     [field: SerializeField] public CoinController CoinController { get; private set; }
@@ -19,9 +19,10 @@ public class ProjectContext : Singleton<ProjectContext>
 
     private void BindInpitSerice()
     {
-        if(_isTestPc)
+        if(_isTestInput)
         {
             InputService = gameObject.AddComponent<PcInputService>();
+            InputService = gameObject.AddComponent<MobileInputService>();
             return;
         }
 

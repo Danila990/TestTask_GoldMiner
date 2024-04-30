@@ -13,5 +13,8 @@ public class Timer
         _timeEnd = Time.time;
     }
 
-    public void Start() => _timeEnd = Time.time + _timeDuration;
+    public void Start()
+    {
+        _timeEnd = Time.time + _timeDuration;
+    }
 }

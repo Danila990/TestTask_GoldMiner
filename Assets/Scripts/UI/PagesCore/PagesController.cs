@@ -44,5 +44,4 @@ public class PagesController : Singleton<PagesController>
 
         return findPage;
     }
-
 }
